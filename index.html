@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta theme-color="white">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="home.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+
+<title>Stork's Nest Homepage</title>
+
+
+
+<style>
+
+/*Ehkä pois*/
+
+  #overflowHid {
+    width: 100vw;
+    height: 100%;
+background: black;
+scroll-margin-block-start: inherit;
+    pointer-events: all;
+
+  }
+
+
+  .magnify {
+    width: 100vw;
+    height: 10svh;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+  <div id="overflowHid">
+
+
+
+
+<div class="magnify">
+</div>
+
+
+
+
+
+
+
+   <div class="poks-content">
+
+
+
+      <header>Stork's Nest</header>
+
+   <div id="dropDown" onclick="hideDropDown()">
+      <img src="home.png" id="dpImg">
+   </div>
+</div>
+
+
+<div id="dropDownCont">
+  <a>Contact</a>
+  <a>About Stork's Nest</a>
+  <a>Stork's Nest Pro</a>
+  <a>Support</a>
+</div>
+
+
+
+
+     <section style="height: 100%;" class="parallax bg-1" >
+      
+
+
+<div id="headline1" class="hiddenHeadline1">Bring Your Ideas to Life <strong style="font-size: 1.88rem;">with AI-Powered Front-End Tool-Box</strong></div>
+
+
+
+
+<div id="s0Div1" class="hidden1">
+
+   Start your 3-day free trial with Stork's Builder Pro today.
+</div>
+
+
+<button id="revealPop" >?</button>
+
+     </section>
+   <!--
+     <section id="content">
+<div>         
+   Stork’s Nest is your creative space to design stunning, personalized galleries in just a few clicks.<br><br> Whether you want to showcase memories, build a portfolio, or create a unique visual experience, this platform gives you complete control—no coding required.  
+</div>
+     </section>
+   -->
+     <section style="height: 116%;" class="parallax bg-2">
+
+      <div id="headline2" class="hiddenHeadline2">Build Stunning Websites Without Writing a Single Line of Code
+
+         <p style="
+-webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px); padding-left: 16vw; padding-right: 16vw; text-align: center;  font-size: 1.1rem; margin-top: 4svh;">   Stork’s Nest gives you the freedom to create beautiful, fully customizable galleries and websites in just a few clicks.<br><br>
+      Whether you’re showcasing your portfolio, sharing memories, or building a creative brand experience, everything is at your fingertips—no technical skills required.
+ 
+         </p>
+
+
+
+
+
+      </div>
+
+     </section>
+   
+    
+   
+     <section style="height: 116%;" class="parallax bg-3">
+
+<div id="headline3" class="hiddenHeadline3">Simple, Flexible, Powerful
+   <p style="
+-webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px); padding-left: 16vw; padding-right: 16vw; text-align: center; font-size: 1.1rem; margin-top: 4svh;">       Upload images or videos, pick your backgrounds, and apply smooth animations that bring your vision to life.<br><br>
+      Add personalized text, edit layouts in real time, and preview your design instantly. With Stork’s Nest, building your perfect gallery is fast, fun, and effortless.
+   
+  
+   </p>
+</div>
+
+     </section>
+
+     <section style="height: 100%;" class="parallax bg-4">
+
+<div id="headline4" class="hiddenHeadline4"><a class="ind2" onclick="navigateTo('indexSIGN.html')" style="background: rgba(0, 183, 255, 0.08); 
+   -webkit-backdrop-filter: blur(4px);
+   backdrop-filter: blur(4px);
+   border-radius: 8px;
+   border: none;
+   padding: 0.63rem 0.63rem;
+   box-shadow: 0 2px 6px rgba(9, 10, 15, 0.63);
+   text-decoration: underline;
+   pointer-events: all;
+   color: white;
+   ">Join Now</a>
+<p style="
+-webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px); padding-left: 16vw; padding-right: 16vw; text-align: center;  font-size: 1.1rem; margin-top: 4svh;">
+Perfect for small businesses, freelancers, and creatives who want stunning, functional sites without expensive developers.<br><br>
+Build, customize, and launch your digital space today with tools that put creativity first.
+
+</p>
+</div>
+
+<footer>
+
+<a id="a1">9100, Finland</a>
+<a id="a2">Stork's Nest© - All rights reserved</a>
+<a id="a3">Cookie Preferences</a>
+<a id="a4">Terms and Conditions</a>
+
+</footer>
+
+    </section>
+
+
+
+   <!-- Overfloowhid-->
+</div>
+
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const content = document.querySelector(".poks-content");
+        requestAnimationFrame(() => {
+          content.classList.add("fade-in");
+        });
+      });
+      </script>
+
+
+<script>
+   window.addEventListener("DOMContentLoaded", () => {
+     const content = document.querySelector(".poks-content");
+     const homBtn = document.getElementById("hom");
+   
+     requestAnimationFrame(() => {
+       content.classList.add("fade-in");
+     });
+   
+     startBtn?.addEventListener("click", () => {
+       content.classList.remove("fade-in");
+       content.classList.add("fade-out");
+   
+       setTimeout(() => {
+         document.getElementById("poks").style.display = "none";
+       }, 600);
+     });
+   
+     homBtn?.addEventListener("click", () => {
+       const poks = document.getElementById("poks");
+   
+       poks.style.display = "flex";
+   
+       content.classList.remove("fade-out");
+       
+       void content.offsetWidth;
+   
+       content.classList.add("fade-in");
+     });
+   });
+   </script>
+ 
+
+
+
+ <script>
+   document.addEventListener("DOMContentLoaded", () => {
+     const sections = document.querySelectorAll(".parallax");
+   
+     const options = {
+       threshold: Array.from({ length: 101 }, (_, i) => i / 100) 
+     };
+   
+     const observer = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.intersectionRatio > 0.24) {
+           entry.target.classList.add("visible-bg");
+         } else {
+           entry.target.classList.remove("visible-bg");
+         }
+       });
+     }, options);
+   
+     sections.forEach(section => observer.observe(section));
+   });
+   </script>
+
+
+
+
+
+<script>
+  function hideDropDown() {
+const mother = document.getElementById("dropDown");
+const child = document.getElementById("dropDownCont");
+
+onclick
+
+if (mother.style.display === "none" || mother.style.display === "")
+{
+mother.style.display = "flex";
+child.style.display = "flex";
+
+}
+else {
+  mother.style.display = "none";
+  child.style.display = "flex"
+}
+
+
+  }
+</script>
+
+
+
+<script>
+  function hideDropDown() {
+const mother = document.getElementById("dropDown");
+const child = document.getElementById("dropDownCont");
+
+onclick
+
+if (child.style.display === "none" || child.style.display === "")
+{
+child.style.display = "flex";
+mother.style.display = "flex";
+
+}
+else {
+  child.style.display = "none";
+  mother.style.display = "flex"
+}
+
+
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const goBackBtn = document.querySelector(".ind2");
+    if (goBackBtn) {
+      goBackBtn.addEventListener("click", function () {
+        window.location.href = "indexSIGN.html"; 
+      });
+    }
+  });
+</script>
+
+
+
+
+<script src="home.js"></script> 
+
+</body>
+</html>
